@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using IronWaterStudio_Test_Stoianova.Data;
 using IronWaterStudio_Test_Stoianova.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace IronWaterStudio_Test_Stoianova.Controllers
 {
@@ -14,10 +16,26 @@ namespace IronWaterStudio_Test_Stoianova.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var products = await _context.Products.ToArrayAsync();
+            return View(products);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Product product)
+        {
+            if(ModelState.IsValid)
+            {
+
+            }
+            return View(product);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id)
+        {
+            return RedirectToAction("Edit", "Products");
         }
     }
 }

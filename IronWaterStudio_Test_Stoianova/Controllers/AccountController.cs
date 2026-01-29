@@ -52,5 +52,11 @@ namespace IronWaterStudio_Test_Stoianova.Controllers
             ModelState.AddModelError("", "Неверный логин или пароль");
             return View(model);
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login");
+        }
     }
 }
