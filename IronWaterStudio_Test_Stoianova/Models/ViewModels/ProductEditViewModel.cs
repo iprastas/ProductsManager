@@ -11,8 +11,7 @@ namespace IronWaterStudio_Test_Stoianova.Models.ViewModels
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
 
-        [Required(ErrorMessage = "Цена обязательна для заполнения.")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Цена должна быть выше нуля.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Цена должна быть выше нуля и с точностью два знака после запятой.")]
         public decimal Price { get; set; }
     }
 }
