@@ -1,0 +1,18 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@hostname = https://localhost:7148
+
+### Получить весь список продуктов
+GET {{hostname}}/api/productsapi
+
+### Отфильтровать по цене:
+### Выше минимальной
+GET {{hostname}}/api/productsapi?minPrice=200
+
+### Ниже максимальной
+GET {{hostname}}/api/productsapi?maxPrice=200
+
+### Комбинированно
+GET {{hostname}}/api/productsapi?minPrice=100&maxPrice=1000
+
+### Получить продукт по Id
+GET {{hostname}}/api/productsapi/3

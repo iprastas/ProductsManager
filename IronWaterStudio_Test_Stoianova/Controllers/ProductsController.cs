@@ -23,7 +23,7 @@ namespace IronWaterStudio_Test_Stoianova.Controllers
             return View(products);
         }
 
-        public IActionResult Create(Product product)
+        public IActionResult Create()
         {
             return View("Edit", new ProductEditViewModel());
         }
