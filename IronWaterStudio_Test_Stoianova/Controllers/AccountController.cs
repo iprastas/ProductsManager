@@ -49,7 +49,7 @@ namespace IronWaterStudio_Test_Stoianova.Controllers
                 return RedirectToAction("Index", "Products");
             }
 
-            ModelState.AddModelError("", "Неверный логин или пароль");
+            TempData["ErrorMessage"] = "Неверный логин или пароль";
             return View(model);
         }
 

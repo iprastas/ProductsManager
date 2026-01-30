@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using IronWaterStudio_Test_Stoianova.Data;
+﻿using IronWaterStudio_Test_Stoianova.Data;
 using IronWaterStudio_Test_Stoianova.Models;
 using IronWaterStudio_Test_Stoianova.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace IronWaterStudio_Test_Stoianova.Controllers
 {
