@@ -4,6 +4,9 @@
 ### Получить весь список продуктов
 GET {{hostname}}/api/productsapi
 
+### Отфильтровать по имени:
+GET {{hostname}}/api/productsapi?name=хлеб
+
 ### Отфильтровать по цене:
 ### Выше минимальной
 GET {{hostname}}/api/productsapi?minPrice=200
