@@ -12,7 +12,7 @@ namespace IronWaterStudio_Test_Stoianova.Models
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
 
-        [Range(0.01, double.MaxValue, ErrorMessage = "Цена должна быть выше нуля.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Цена должна быть выше нуля и с точностью два знака после запятой.")]
         public decimal Price { get; set; }
 
     }
